@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Q&A with OpenAI</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div class="container">
+        <h1>📝 마크다운 기반 질문 답변</h1>
+
+        <div class="input-group">
+            <label for="questionInput">질문:</label>
+            <textarea id="questionInput" rows="4" placeholder="마크다운 내용에 대해 질문할 내용을 입력하세요..."></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="fileInput">마크다운 파일 선택:</label>
+            <input type="file" id="fileInput" accept=".md,.txt"> <span id="fileName" class="file-name">선택된 파일 없음</span>
+        </div>
+
+        <div class="input-group">
+            <label for="modelSelect">사용할 모델:</label>
+            <select id="modelSelect">
+                <option value="gpt-3.5-turbo" selected>GPT-3.5 Turbo</option>
+                <option value="gpt-4">GPT-4</option>
+                <option value="gpt-4.1">GPT-4.1</option>
+                </select>
+        </div>
+
+        <button id="submitBtn">답변 생성하기</button>
+
+        <div id="status" class="status-message"></div>
+
+        <div class="output-group">
+            <h2>답변 결과:</h2>
+            <div id="outputArea" class="output-area">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>
